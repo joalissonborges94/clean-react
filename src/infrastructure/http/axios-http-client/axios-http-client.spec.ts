@@ -9,9 +9,9 @@ const makeSut = (): AxiosHttpClient => {
 }
 
 describe('AxiosHttpClient', () => {
-    test('Should call axios with correct url', async() => {
+    test('Should call axios with correct url and verb', async() => {
         const sut = makeSut();
         sut.post({url: 'any_url'});
-        expect(mockedAxios).toHaveBeenCalledWith('any_url')
+        expect(mockedAxios.post).toHaveBeenCalledWith('any_url')
     })
 })
