@@ -43,7 +43,8 @@ module.exports = {
     devServer: {
         devMiddleware: {
           writeToDisk: true,
-        }
+        },
+        historyApiFallback: true
     },
     externals: {
         react: 'React',
