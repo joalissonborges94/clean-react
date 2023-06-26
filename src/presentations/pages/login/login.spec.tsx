@@ -50,12 +50,12 @@ describe('Login Component', () => {
         expect(passwordStatus.textContent).toBe('🔴');
     });
 
-    test('Should call validation with corret value', () => {
+    test('Should call validation with corret email', () => {
         const { sut, validationSpy } = makeSut();
         const emailInput = sut.getByTestId('email');
         fireEvent.input(emailInput, {target: {value: 'any-email'}});
         expect(validationSpy.input).toEqual({
             email: 'any-email'
-        })
-    })
+        });
+    });
 })
